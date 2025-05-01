@@ -60,9 +60,9 @@ function resetGame() {
     document.getElementById("puntaje").innerHTML = "";
 }
 function mostrarAnimacionGanador() {
-  const playerName = document.getElementById("playerName").value || "Jugador 1";
+  const playerName = document.getElementById("playerName").value || "Tu";
   const animacion = document.getElementById("animacionGanador1");
-  animacion.innerHTML = `<h2>${playerName} ha ganado el juego! 🎉</h2>`;
+  animacion.innerHTML = `<h2>${playerName} has ganado el juego! 🎉</h2>`;
   animacion.style.display = "block"; // Mostrar animación
 
   setTimeout(() => {

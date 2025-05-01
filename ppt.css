@@ -3,8 +3,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  justify-content: center;
+  gap: 20px;
+}
+
+
 .game-container {
-  max-width: 500px;
+  max-width: 700px;
   margin: auto;
   padding: 100px;
 }
@@ -36,7 +44,7 @@ button img {
 
 
 .animacion-ganador1, .animacion-computadora {
-  display: none; /*Oculto por defecto*/
+  display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -45,11 +53,59 @@ button img {
   font-size: 40px;
   text-align: center;
   line-height: 100vh;
-  animation: fadeOut 2s 3s forwards; /* Se oculta después de 3s */
+  animation: fadeOut 2s 3s forwards; 
 }
 
 /* Animación de aparición */
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+
+@media (max-width:430px) {
+  body {
+    font-size: 18px; /* Reduce el tamaño del texto */
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  h1{
+    font-size: 2rem; /* Reduce el tamaño del título */
+    margin: 10px 0;
+  }
+  .game-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  .name{
+    font-size: 1.5rem; /* Reduce el tamaño del texto de los nombres */
+    margin: 10px 0;
+  }
+  #opciones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .animacion-computadora, .animacion-ganador1 {
+    display: none;
+    position: fixed;
+    top: 10; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 80vh;
+    
+  }
+  #puntaje{
+    font-size: 1.5rem; /* Reduce el tamaño del texto de los puntajes */
+    margin: 3px 0;
+  }
+  
 }
