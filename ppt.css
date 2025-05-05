@@ -101,11 +101,19 @@ button img {
     font-size: 18px;
     text-align: center;
     line-height: 80vh;
+    text-overflow: ellipsis;
     
   }
   #puntaje{
+    
     font-size: 1.5rem; /* Reduce el tamaño del texto de los puntajes */
     margin: 3px 0;
   }
-  
+  #playerName{
+    width: 80%;  /* Ajusta según el diseño */
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
